@@ -1,0 +1,27 @@
+# React / Node.js
+node_modules/
+dist/
+.vite/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Секретные данные
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Временные файлы
+*.log
+.DS_Store
+Thumbs.db
+
+# Личные настройки редактора
+.vscode/
+.idea/

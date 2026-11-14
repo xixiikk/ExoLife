@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #ffffff;
+  background-color: #070b18;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+/* Плавное парение планеты */
+@keyframes planetFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Пульсация атмосферного свечения */
+@keyframes planetGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(1.15);
+  }
+}
+
+.planet-float {
+  animation: planetFloat 6s ease-in-out infinite;
+}
+
+.planet-glow {
+  animation: planetGlow 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .planet-float,
+  .planet-glow {
+    animation: none;
+  }
+}
+/* Плавная навигация по разделам */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Тонкая космическая полоса прокрутки */
+.exolife-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #22d3ee #172338;
+}
+
+/* Chrome, Edge и другие браузеры на Chromium */
+.exolife-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.exolife-scrollbar::-webkit-scrollbar-track {
+  background: #172338;
+  border-radius: 999px;
+}
+
+.exolife-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #22d3ee 0%,
+    #8b5cf6 100%
+  );
+  border-radius: 999px;
+  border: 2px solid #172338;
+}
+
+.exolife-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #67e8f9;
+}
