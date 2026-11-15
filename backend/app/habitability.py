@@ -54,8 +54,7 @@ def build_ranking(planets, limit=50):
         mass = planet.get("pl_bmasse")
         mass_provenance = planet.get("pl_bmassprov")
 
-        # Не используем минимальную массу M*sin(i)
-        # как полноценную массу планеты.
+        # Не используем минимальную массу M*sin(i) как полноценную массу планеты.
         if mass_provenance != "Mass":
             continue
 
